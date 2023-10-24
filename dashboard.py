@@ -13,7 +13,7 @@ import plotly.graph_objects as go
 import re
 
 
-@st.cache()
+@st.cache_data()
 def get_data():
 
     # low_memory = False (ler todo o arquivo na mesma hora coloca na memoria)
@@ -303,6 +303,6 @@ if __name__ == '__main__':
     st.write('')
     st.write('Dataset usado para essa Análise Exploratória de Dados: ')
     # check button
-    x = st.checkbox('Dataset')
+    x = st.checkbox('Exemplo do Dataset')
     if x:
         st.dataframe(data.head(), width=2000)
